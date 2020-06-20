@@ -1,0 +1,9 @@
+.user-card {
+    display: inline-block;
+    background-color: #f2a1e2;
+    flex: 1;
+}
+
+.user-male {
+    background-color: aquamarine;
+}
