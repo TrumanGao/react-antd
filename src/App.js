@@ -1,9 +1,16 @@
 import React from "react";
+// 引入路由
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
+// HashRouter：锚点链接（路由地址后会有#号）。
+// BrowserRouter：H5新特性 history.push。（问题：上线后需要后台做重定向处理，否则会产生404bug）
 import logo from "./logo.svg";
 import "./App.css";
-import UserCard from "./components/User/UserCard";
-// import Life from "./pages/Life/Life.jsx";
-import Performance from "./pages/Performance/Performance.jsx";
+import Life from "./pages/Life/Life.jsx";
+import Parent from "./pages/ParentChild/Parent.jsx";
+// import Performance from "./pages/Performance/Performance.jsx";
+// import MysetState from "./pages/MysetState/MysetState.jsx";
+import Render from "./pages/Render/Render.jsx";
 
 export default function App() {
   const user1 = {
@@ -18,14 +25,23 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h3>路由</h3>
+        <Router>
+          <NavLink to="/life">跳转到生命周期</NavLink>
+          <NavLink to="/render">跳转到渲染</NavLink>
+          <Route path="/life" component={Life}></Route>
+          <Route path="/render" component={Render}></Route>
+        </Router>
         <img src={logo} className="App-logo" alt="logo" />
 
         <div className="user-card-wrap flex-box">
-          <UserCard userInfo={user1} />
-          <UserCard userInfo={user2} />
+          <Parent userInfo={user1} />
+          <Parent userInfo={user2} />
         </div>
         {/* <Life /> */}
-        <Performance />
+        {/* <Performance /> */}
+        {/* <MysetState /> */}
+        {/* <Render /> */}
       </header>
     </div>
   );

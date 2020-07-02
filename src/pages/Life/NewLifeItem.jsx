@@ -6,9 +6,9 @@ export default class LifeNewItem extends React.Component {
   // 当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下：
   constructor() {}
   // 不常用：
-  static getDerivedStateFromProps() {
-    console.log("getDerivedStateFromProps生命周期");
-  }
+  // static getDerivedStateFromProps() {
+  //   console.log("getDerivedStateFromProps生命周期");
+  // }
   render() {
     return <div>新版生命周期</div>;
   }
@@ -19,13 +19,13 @@ export default class LifeNewItem extends React.Component {
   // 二、更新
   // 当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：
   // 不常用：
-  static getDerivedStateFromProps() {
-    console.log("getDerivedStateFromProps生命周期");
-  }
+  // static getDerivedStateFromProps() {
+  //   console.log("getDerivedStateFromProps生命周期");
+  // }
   // 不常用：
-  shouldComponentUpdate() {
-    console.log("shouldComponentUpdate生命周期");
-  }
+  // shouldComponentUpdate() {
+  //   console.log("shouldComponentUpdate生命周期");
+  // }
   // render() {}
   getSnapshotBeforeUpdate() {
     console.log("getSnapshotBeforeUpdate生命周期");
