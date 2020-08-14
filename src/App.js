@@ -11,6 +11,9 @@ import Parent from "./pages/ParentChild/Parent.jsx";
 // import Performance from "./pages/Performance/Performance.jsx";
 // import MysetState from "./pages/MysetState/MysetState.jsx";
 import Render from "./pages/Render/Render.jsx";
+import Common1 from './pages/HighOrder/Common1'
+import Common2 from './pages/HighOrder/Common2'
+
 
 export default function App() {
   const user1 = {
@@ -38,6 +41,9 @@ export default function App() {
           <Parent userInfo={user1} />
           <Parent userInfo={user2} />
         </div>
+
+        <Common1></Common1>
+        <Common2></Common2>
         {/* <Life /> */}
         {/* <Performance /> */}
         {/* <MysetState /> */}
